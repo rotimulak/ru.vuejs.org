@@ -17,7 +17,27 @@
         <meta name="twitter:description" content="Vue.js — Интуитивный, быстрый и компонуемый MVVM для создания интерактивных интерфейсов.">
         <meta name="twitter:image" content="https://ru.vuejs.org/images/logo.png">
 
-        <link rel="icon" href="/images/logo.png" type="image/x-icon">
+        <link rel="apple-touch-icon" sizes="57x57" href="/images/icons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/images/icons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/images/icons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/images/icons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/images/icons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/images/icons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="/images/icons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/images/icons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png">
+        <meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
+        <link rel="icon" href="/images/logo.png" type="image/png">
+
+        <meta name="msapplication-TileColor" content="#4fc08d">
+        <meta name="theme-color" content="#4fc08d">
+
+        <meta name="msapplication-config" content="browserconfig.xml">
+        <link rel="manifest" href="/manifest.json">
 
         <link href='//fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet' type='text/css'>
         <link href='//fonts.googleapis.com/css?family=Dosis:500&text=Vue.js' rel='stylesheet' type='text/css'>
@@ -36,7 +56,7 @@
           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
           })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
           ga('create', 'UA-46852172-1', 'ru.vuejs.org');
-          
+
           ga('send', 'pageview');
         </script>
     </head>
@@ -192,16 +212,18 @@
             
         </h2>
         <ul class="menu-root">
-            
-            
-        </ul>
+    
+    
+</ul>
+
     </div>
 </div>
 
 
 <div class="content api with-sidebar ">
     
-      <div id="ad">
+      
+        <div id="ad">
   <script>
     (function () {
       var showConfPromo = Math.random() <= 0.33
@@ -224,6 +246,7 @@
   </script>
 </div>
 
+      
     
     
       <h1>API</h1>
@@ -1507,6 +1530,20 @@
 <li><p><strong>См. также:</strong> <a href="../guide/components.html#Именованные-слоты">Именованные слоты</a></p>
 </li>
 </ul>
+<h3 id="is"><a href="#is" class="headerlink" title="is"></a>is</h3><ul>
+<li><p><strong>Принимает:</strong> <code>string</code></p>
+<p>Используется для <a href="../guide/components.html#Динамическое-переключение-компонентов">динамически переключаемых компонентов</a> и для обхода <a href="../guide/components.html#Особенности-парсинга-DOM-шаблона">ограничений при использовании DOM-шаблонов</a>.</p>
+<p>Например:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- используемый компонент меняется при изменениях currentView --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">component</span> <span class="attr">v-bind:is</span>=<span class="string">"currentView"</span>&gt;</span><span class="tag">&lt;/<span class="name">component</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- необходим, потому что &lt;my-row&gt; будет считаться невалидным --&gt;</span></div><div class="line"><span class="comment">&lt;!-- элементом внутри &lt;table&gt; и будет вынесен выше             --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">tr</span> <span class="attr">is</span>=<span class="string">"my-row"</span>&gt;</span><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>Подробности использования можно изучить по ссылкам ниже.</p>
+</li>
+<li><p><strong>См. также:</strong></p>
+<ul>
+<li><a href="../guide/components.html#Динамическое-переключение-компонентов">Динамическое переключение компонентов</a></li>
+<li><a href="../guide/components.html#Особенности-парсинга-DOM-шаблона">Особенности парсинга DOM-шаблона</a></li>
+</ul>
+</li>
+</ul>
 <h2 id="Встроенные-компоненты"><a href="#Встроенные-компоненты" class="headerlink" title="Встроенные компоненты"></a>Встроенные компоненты</h2><h3 id="component"><a href="#component" class="headerlink" title="component"></a>component</h3><ul>
 <li><p><strong>Входные параметры:</strong></p>
 <ul>
@@ -1659,7 +1696,8 @@
         <script>
         [
           '#search-query-nav',
-          '#search-query-sidebar'
+          '#search-query-sidebar',
+          '#search-query-menu'
         ].forEach(function (selector) {
           if (!document.querySelector(selector)) return
           // search index defaults to v2
